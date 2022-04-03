@@ -4,6 +4,7 @@ import './styles/main.scss';
 import { useRouterPaths } from '@hooks/useRouterPaths';
 
 const App = () => {
+  const x = 1;
   // pass roles, etc. form context (?) to function
   const routers = useRouterPaths();
 
