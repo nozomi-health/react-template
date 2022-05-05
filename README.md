@@ -8,3 +8,9 @@ yarn start
 yarn build
 yarn test
 ```
+# Husky setup
+
+After installing dependencies run 
+```
+yarn husky install
+```
