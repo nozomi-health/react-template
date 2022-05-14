@@ -5,7 +5,7 @@ const Main = () => {
 
   return (
     <div className="h-full w-full">
-      <p className="text-blue-700">{t('title')}</p>
+      <p className="text-green-400">{t('title')}</p>
     </div>
   );
 };
