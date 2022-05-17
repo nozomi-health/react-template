@@ -37,3 +37,25 @@ jobs:
           PUBLIC_IP_ADDRESS: ${{ secrets.PUBLIC_IP_ADDRESS }}
           DOMAIN: ${{ secrets.DOMAIN }}
         run: scp -r ./build/* $DEPLOYER_USERNAME@$PUBLIC_IP_ADDRESS:/var/www/$DOMAIN/html
+      # - id: set_var
+      #   run: |
+      #     content=`cat ./package.json`
+      #     # the following lines are only required for multi line json
+      #     content="${content//'%'/'%25'}"
+      #     content="${content//$'\n'/'%0A'}"
+      #     content="${content//$'\r'/'%0D'}"
+      #     # end of optional handling for multi line json
+      #     echo "::set-output name=packageJson::$content"
+      # - name: Post to a Slack channel
+      #   id: slack
+      #   uses: slackapi/slack-github-action@v1.19.0
+      #   with:
+      #     # Slack channel id, channel name, or user id to post message.
+      #     # See also: https://api.slack.com/methods/chat.postMessage#channels
+      #     channel-id: 'Channel_Id'
+      #     # Message to post 
+      #     slack-message: "Hi. A new v${{ fromJson(steps.set_var.outputs.packageJson).version }} version of our app has been uploaded!"
+      #   env:
+      #     # Slack developer bot token
+      #     SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+
