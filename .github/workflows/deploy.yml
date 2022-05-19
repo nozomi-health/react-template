@@ -54,7 +54,7 @@ jobs:
       #     # See also: https://api.slack.com/methods/chat.postMessage#channels
       #     channel-id: 'Channel_Id'
       #     # Message to post 
-      #     slack-message: "Hi. A new v${{ fromJson(steps.set_var.outputs.packageJson).version }} version of our app has been uploaded!"
+      #     slack-message: "Hi. A new v${{ fromJson(steps.set_var.outputs.packageJson).version }} version of our web app has been uploaded!"
       #   env:
       #     # Slack developer bot token
       #     SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
