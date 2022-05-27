@@ -12,5 +12,5 @@ yarn test
 
 After installing dependencies run 
 ```
-yarn husky install
+yarn husky install && echo 'PATH=$PATH:'$PATH >> .husky/_/husky.sh
 ```

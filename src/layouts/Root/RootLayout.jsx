@@ -1,8 +1,11 @@
-/* eslint-disable react/prop-types */
-import React from 'react';
-import { renderRoutes } from 'react-router-config';
+import { Outlet } from 'react-router-dom';
 
-const RootLayout = ({ route }) => {
-  return <div className="min-h-screen h-full flex relative">{renderRoutes(route.routes)}</div>;
+const RootLayout = () => {
+  return (
+    <div className="min-h-screen h-full flex relative">
+      <Outlet />
+    </div>
+  );
 };
+
 export default RootLayout;

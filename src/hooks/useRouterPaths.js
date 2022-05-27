@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 import { ROOT_ROUTES } from '@router/root';
 import RootLayout from '@layouts/Root';
 import { RedirectRoot } from '@pages/RedirectPage';
-import { NOT_FOUND } from '@router/consts';
+import { ROOT, NOT_FOUND } from '@router/consts';
 
 export const useRouterPaths = () =>
   useMemo(() => {
@@ -12,16 +12,11 @@ export const useRouterPaths = () =>
       ...ROOT_ROUTES,
       {
         path: NOT_FOUND,
-        component: RedirectRoot,
+        element: <RedirectRoot />,
       },
     ];
 
-    const layout = RootLayout;
+    const layout = <RootLayout />;
 
-    return [
-      {
-        component: layout,
-        routes: allRoutes,
-      },
-    ];
+    return [{ path: `${ROOT}`, element: layout, children: allRoutes }];
   }, []);

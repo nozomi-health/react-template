@@ -1,5 +1,5 @@
-import { Redirect } from 'react-router-dom';
+import { Navigate } from 'react-router-dom';
 
 import { ROOT } from '@router/consts';
 
-export const RedirectRoot = () => <Redirect to={ROOT} />;
+export const RedirectRoot = () => <Navigate to={ROOT} />;

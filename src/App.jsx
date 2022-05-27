@@ -1,13 +1,14 @@
-import { renderRoutes } from 'react-router-config';
+import { useRoutes } from 'react-router-dom';
+import { useRouterPaths } from '@hooks/useRouterPaths';
 
 import './styles/main.scss';
-import { useRouterPaths } from '@hooks/useRouterPaths';
 
 const App = () => {
   // pass roles, etc. form context (?) to function
   const routers = useRouterPaths();
+  const routes = useRoutes(routers);
 
-  return routers && renderRoutes(routers);
+  return routers && routes;
 };
 
 export default App;
