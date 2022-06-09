@@ -14,3 +14,5 @@ After installing dependencies run
 ```
 yarn husky install && echo 'PATH=$PATH:'$PATH >> .husky/_/husky.sh
 ```
+# CI/CD Slack integration
+To enable slack notifications on automatic builds, please, follow the instructions in corresponding section of ./.github/workflows/deploy.yml file
