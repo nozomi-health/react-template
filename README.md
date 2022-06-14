@@ -1,5 +1,5 @@
 # react-template
-Use this project as a base for any react projects. Keep existing project structure and follow example files logic and principles while extending it. 
+Use this project as a base for any react projects. Keep existing project structure and follow example files logic and principles while extending it. For more info check [Notion page](https://www.notion.so/React-project-initialisation-e309c26c0d8149a2be00e04be03cc7bb)
 
 ## Install and run
 ```
