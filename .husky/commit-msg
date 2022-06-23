@@ -2,7 +2,7 @@
 . "$(dirname "$0")/_/husky.sh"
 
 local_branch_name="$(git rev-parse --abbrev-ref HEAD)"
-valid_branch_regex='^((fix|feature)\/[a-zA-Z0-9\-_]+)$'
+valid_branch_regex='^(fix|feature)\/[a-zA-Z0-9_\-]+$'
 branch_error_message="Branch name should be development/master/main or in following format: feature-fix/<issue_id>_<branch description>"
 
 if [[ $local_branch_name != 'main' && $local_branch_name != 'master' && $local_branch_name != 'development' && ! $local_branch_name =~ $valid_branch_regex ]]; then
